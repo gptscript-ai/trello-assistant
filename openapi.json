@@ -39,10 +39,7 @@
       "Action": {
         "type": "object",
         "properties": {
-          "id": {
-            "type": "string",
-            "$ref": "#/components/schemas/TrelloID"
-          },
+          "id": { "type": "string", "$ref": "#/components/schemas/TrelloID" },
           "idMemberCreator": {
             "type": "string",
             "$ref": "#/components/schemas/TrelloID"
@@ -104,35 +101,17 @@
                   "perAction": {
                     "type": "object",
                     "properties": {
-                      "status": {
-                        "type": "string",
-                        "example": "ok"
-                      },
-                      "disableAt": {
-                        "type": "number",
-                        "example": 1000
-                      },
-                      "warnAt": {
-                        "type": "number",
-                        "example": 900
-                      }
+                      "status": { "type": "string", "example": "ok" },
+                      "disableAt": { "type": "number", "example": 1000 },
+                      "warnAt": { "type": "number", "example": 900 }
                     }
                   },
                   "uniquePerAction": {
                     "type": "object",
                     "properties": {
-                      "status": {
-                        "type": "string",
-                        "example": "ok"
-                      },
-                      "disableAt": {
-                        "type": "number",
-                        "example": 1000
-                      },
-                      "warnAt": {
-                        "type": "number",
-                        "example": 900
-                      }
+                      "status": { "type": "string", "example": "ok" },
+                      "disableAt": { "type": "number", "example": 1000 },
+                      "warnAt": { "type": "number", "example": 900 }
                     }
                   }
                 }
@@ -152,10 +131,7 @@
                   "contextOn": {
                     "type": "object",
                     "properties": {
-                      "type": {
-                        "type": "string",
-                        "example": "translatable"
-                      },
+                      "type": { "type": "string", "example": "translatable" },
                       "translationKey": {
                         "type": "string",
                         "example": "action_on"
@@ -170,32 +146,20 @@
                   "card": {
                     "type": "object",
                     "properties": {
-                      "type": {
-                        "type": "string",
-                        "example": "card"
-                      },
+                      "type": { "type": "string", "example": "card" },
                       "hideIfContext": { "type": "boolean" },
                       "id": {
                         "type": "string",
                         "$ref": "#/components/schemas/TrelloID"
                       },
-                      "shortLink": {
-                        "type": "string",
-                        "example": "3CsPkqOF"
-                      },
-                      "text": {
-                        "type": "string",
-                        "example": "Bowie"
-                      }
+                      "shortLink": { "type": "string", "example": "3CsPkqOF" },
+                      "text": { "type": "string", "example": "Bowie" }
                     }
                   },
                   "comment": {
                     "type": "object",
                     "properties": {
-                      "type": {
-                        "type": "string",
-                        "example": "comment"
-                      },
+                      "type": { "type": "string", "example": "comment" },
                       "text": {
                         "type": "string",
                         "example": "Can never go wrong with bowie"
@@ -205,17 +169,9 @@
                   "memberCreator": {
                     "type": "object",
                     "properties": {
-                      "type": {
-                        "type": "string",
-                        "example": "member"
-                      },
-                      "id": {
-                        "$ref": "#/components/schemas/TrelloID"
-                      },
-                      "username": {
-                        "type": "string",
-                        "example": "bobloblaw"
-                      },
+                      "type": { "type": "string", "example": "member" },
+                      "id": { "$ref": "#/components/schemas/TrelloID" },
+                      "username": { "type": "string", "example": "bobloblaw" },
                       "text": {
                         "type": "string",
                         "example": "Bob Loblaw (World)"
@@ -495,16 +451,8 @@
               "comments": { "type": "integer", "example": 0 },
               "attachments": { "type": "integer", "example": 0 },
               "description": { "type": "boolean" },
-              "due": {
-                "type": "string",
-                "format": "date",
-                "nullable": true
-              },
-              "start": {
-                "type": "string",
-                "format": "date",
-                "nullable": true
-              },
+              "due": { "type": "string", "format": "date", "nullable": true },
+              "start": { "type": "string", "format": "date", "nullable": true },
               "dueComplete": { "type": "boolean" }
             }
           },
@@ -560,15 +508,11 @@
           },
           "idMembers": {
             "type": "array",
-            "items": {
-              "oneOf": [{ "$ref": "#/components/schemas/TrelloID" }]
-            }
+            "items": { "oneOf": [{ "$ref": "#/components/schemas/TrelloID" }] }
           },
           "idMembersVoted": {
             "type": "array",
-            "items": {
-              "oneOf": [{ "$ref": "#/components/schemas/TrelloID" }]
-            }
+            "items": { "oneOf": [{ "$ref": "#/components/schemas/TrelloID" }] }
           },
           "idShort": { "type": "integer" },
           "idAttachmentCover": {
@@ -579,9 +523,7 @@
           },
           "labels": {
             "type": "array",
-            "items": {
-              "oneOf": [{ "$ref": "#/components/schemas/TrelloID" }]
-            }
+            "items": { "oneOf": [{ "$ref": "#/components/schemas/TrelloID" }] }
           },
           "limits": { "type": "object", "$ref": "#/components/schemas/Limits" },
           "locationName": { "type": "string", "nullable": true },
@@ -667,10 +609,7 @@
             "items": {
               "type": "object",
               "properties": {
-                "name": {
-                  "type": "string",
-                  "example": "organization_name"
-                },
+                "name": { "type": "string", "example": "organization_name" },
                 "displayName": {
                   "type": "string",
                   "example": "Organization Name"
@@ -764,10 +703,7 @@
                     "value": {
                       "type": "object",
                       "properties": {
-                        "text": {
-                          "type": "string",
-                          "example": "High"
-                        }
+                        "text": { "type": "string", "example": "High" }
                       }
                     },
                     "color": { "type": "string", "example": "red" },
@@ -828,18 +764,12 @@
               "type": "object",
               "properties": {
                 "unified": { "type": "string", "example": "1F600" },
-                "name": {
-                  "type": "string",
-                  "example": "GRINNING FACE"
-                },
+                "name": { "type": "string", "example": "GRINNING FACE" },
                 "native": { "type": "string", "example": "😀" },
                 "shortName": { "type": "string", "example": "grinning" },
                 "shortNames": {
                   "type": "array",
-                  "items": {
-                    "type": "string",
-                    "example": "grinning\""
-                  }
+                  "items": { "type": "string", "example": "grinning\"" }
                 },
                 "text": { "type": "string", "example": ":)" },
                 "texts": {
@@ -847,16 +777,10 @@
                   "nullable": true,
                   "example": null
                 },
-                "category": {
-                  "type": "string",
-                  "example": "Smileys & People"
-                },
+                "category": { "type": "string", "example": "Smileys & People" },
                 "sheetX": { "type": "number", "example": 30 },
                 "sheetY": { "type": "number", "example": 24 },
-                "tts": {
-                  "type": "string",
-                  "example": "grinning face"
-                },
+                "tts": { "type": "string", "example": "grinning face" },
                 "keywords": {
                   "type": "array",
                   "items": { "type": "string", "example": "face" }
@@ -973,10 +897,7 @@
                 "items": {
                   "type": "object",
                   "properties": {
-                    "name": {
-                      "type": "string",
-                      "example": "enterprise_name"
-                    },
+                    "name": { "type": "string", "example": "enterprise_name" },
                     "displayName": {
                       "type": "string",
                       "example": "My Test Enterprise!"
@@ -1054,10 +975,7 @@
                 "example": "5bc79d4206526d2279c1e6ea"
               },
               "username": { "type": "string", "example": "bobloblaw" },
-              "fullName": {
-                "type": "string",
-                "example": "Bob Loblaw (Trello)"
-              }
+              "fullName": { "type": "string", "example": "Bob Loblaw (Trello)" }
             }
           },
           "organization": {
@@ -1086,10 +1004,7 @@
                 "$ref": "#/components/schemas/TrelloID",
                 "example": "617ac9070293e6612650e0ca"
               },
-              "name": {
-                "type": "string",
-                "example": "organization name"
-              }
+              "name": { "type": "string", "example": "organization name" }
             }
           },
           "member": {
@@ -1420,10 +1335,7 @@
           "messagesDismissed": {
             "type": "object",
             "properties": {
-              "name": {
-                "type": "string",
-                "example": "ad-security-features"
-              },
+              "name": { "type": "string", "example": "ad-security-features" },
               "count": { "type": "string", "example": 4 },
               "lastDismissed": {
                 "type": "string",
@@ -1598,10 +1510,7 @@
                 "$ref": "#/components/schemas/TrelloID",
                 "example": "59cd149051aa57a706962996"
               },
-              "fullName": {
-                "type": "string",
-                "example": "Bob Loblaw (Trello)"
-              }
+              "fullName": { "type": "string", "example": "Bob Loblaw (Trello)" }
             }
           },
           "date": {
@@ -1625,14 +1534,8 @@
                       "$ref": "#/components/schemas/TrelloID",
                       "example": "5ab10be237846c43015f1091"
                     },
-                    "fullName": {
-                      "type": "string",
-                      "example": "Bob Loblaw"
-                    },
-                    "username": {
-                      "type": "string",
-                      "example": "bobloblaw"
-                    },
+                    "fullName": { "type": "string", "example": "Bob Loblaw" },
+                    "username": { "type": "string", "example": "bobloblaw" },
                     "initials": { "type": "string", "example": "BL" },
                     "avatarHash": {
                       "type": "string",
@@ -1650,14 +1553,8 @@
                       "$ref": "#/components/schemas/TrelloID",
                       "example": "5ab10be237846c43015f1091"
                     },
-                    "fullName": {
-                      "type": "string",
-                      "example": "Bob Loblaw"
-                    },
-                    "username": {
-                      "type": "string",
-                      "example": "bobloblaw"
-                    },
+                    "fullName": { "type": "string", "example": "Bob Loblaw" },
+                    "username": { "type": "string", "example": "bobloblaw" },
                     "initials": { "type": "string", "example": "BL" },
                     "avatarHash": {
                       "type": "string",
@@ -1712,10 +1609,7 @@
             "$ref": "#/components/schemas/TrelloID",
             "example": "5a7cd2f8f99c517f58da1579"
           },
-          "name": {
-            "type": "string",
-            "example": "Attachment Section Example"
-          },
+          "name": { "type": "string", "example": "Attachment Section Example" },
           "locale": { "type": "string", "example": "en-US" },
           "description": {
             "type": "string",
@@ -2580,6 +2474,15 @@
       }
     },
     "/boards/{id}": {
+      "parameters": [
+        {
+          "name": "id",
+          "in": "path",
+          "description": "",
+          "required": true,
+          "schema": { "$ref": "#/components/schemas/TrelloID" }
+        }
+      ],
       "get": {
         "tags": [],
         "summary": "Get a Board",
@@ -2888,15 +2791,7 @@
         "summary": "Delete a Board",
         "description": "Delete a board.",
         "operationId": "delete-boards-id",
-        "parameters": [
-          {
-            "name": "id",
-            "in": "path",
-            "description": "The id of the board to delete",
-            "required": true,
-            "schema": { "type": "string" }
-          }
-        ],
+        "parameters": [],
         "deprecated": false,
         "responses": { "200": { "description": "Success" } }
       }
@@ -3197,11 +3092,7 @@
                 "schema": {
                   "type": "array",
                   "items": {
-                    "oneOf": [
-                      {
-                        "$ref": "#/components/schemas/BoardStars"
-                      }
-                    ]
+                    "oneOf": [{ "$ref": "#/components/schemas/BoardStars" }]
                   }
                 }
               }
@@ -3300,9 +3191,7 @@
               "application/json": {
                 "schema": {
                   "type": "array",
-                  "items": {
-                    "$ref": "#/components/schemas/CustomField"
-                  }
+                  "items": { "$ref": "#/components/schemas/CustomField" }
                 }
               }
             }
@@ -3433,9 +3322,7 @@
               "application/json": {
                 "schema": {
                   "type": "array",
-                  "items": {
-                    "$ref": "#/components/schemas/TrelloList"
-                  }
+                  "items": { "$ref": "#/components/schemas/TrelloList" }
                 }
               }
             }
@@ -4246,11 +4133,7 @@
             "schema": {
               "oneOf": [
                 { "type": "string", "enum": ["top", "bottom"] },
-                {
-                  "type": "number",
-                  "format": "float",
-                  "minimum": 0
-                }
+                { "type": "number", "format": "float", "minimum": 0 }
               ]
             }
           },
@@ -4394,6 +4277,15 @@
       }
     },
     "/cards/{id}": {
+      "parameters": [
+        {
+          "name": "id",
+          "in": "path",
+          "description": "The ID of the Card",
+          "required": true,
+          "schema": { "$ref": "#/components/schemas/TrelloID" }
+        }
+      ],
       "get": {
         "tags": [],
         "summary": "Get a Card",
@@ -4862,11 +4754,7 @@
                 "schema": {
                   "type": "array",
                   "items": {
-                    "oneOf": [
-                      {
-                        "$ref": "#/components/schemas/Attachment"
-                      }
-                    ]
+                    "oneOf": [{ "$ref": "#/components/schemas/Attachment" }]
                   }
                 }
               }
@@ -4924,11 +4812,7 @@
                 "schema": {
                   "type": "array",
                   "items": {
-                    "oneOf": [
-                      {
-                        "$ref": "#/components/schemas/Attachment"
-                      }
-                    ]
+                    "oneOf": [{ "$ref": "#/components/schemas/Attachment" }]
                   }
                 }
               }
@@ -4938,6 +4822,22 @@
       }
     },
     "/cards/{id}/attachments/{idAttachment}": {
+      "parameters": [
+        {
+          "name": "id",
+          "in": "path",
+          "description": "The ID of the Card",
+          "required": true,
+          "schema": { "$ref": "#/components/schemas/TrelloID" }
+        },
+        {
+          "name": "idAttachment",
+          "in": "path",
+          "description": "The ID of the Attachment",
+          "required": true,
+          "schema": { "$ref": "#/components/schemas/TrelloID" }
+        }
+      ],
       "get": {
         "tags": [],
         "summary": "Get an Attachment on a Card",
@@ -4954,11 +4854,7 @@
             "schema": {
               "type": "array",
               "items": {
-                "anyOf": [
-                  {
-                    "$ref": "#/components/schemas/AttachmentFields"
-                  }
-                ]
+                "anyOf": [{ "$ref": "#/components/schemas/AttachmentFields" }]
               },
               "default": ["all"]
             }
@@ -4973,11 +4869,7 @@
                 "schema": {
                   "type": "array",
                   "items": {
-                    "oneOf": [
-                      {
-                        "$ref": "#/components/schemas/Attachment"
-                      }
-                    ]
+                    "oneOf": [{ "$ref": "#/components/schemas/Attachment" }]
                   }
                 }
               }
@@ -4990,22 +4882,7 @@
         "summary": "Delete an Attachment on a Card",
         "description": "Delete an Attachment",
         "operationId": "deleted-cards-id-attachments-idattachment",
-        "parameters": [
-          {
-            "name": "id",
-            "in": "path",
-            "description": "The ID of the Card",
-            "required": true,
-            "schema": { "$ref": "#/components/schemas/TrelloID" }
-          },
-          {
-            "name": "idAttachment",
-            "in": "path",
-            "description": "The ID of the attachment to delete",
-            "required": true,
-            "schema": { "$ref": "#/components/schemas/TrelloID" }
-          }
-        ],
+        "parameters": [],
         "deprecated": false,
         "responses": { "200": { "description": "Success" } }
       }
@@ -5773,9 +5650,7 @@
               "application/json": {
                 "schema": {
                   "type": "array",
-                  "items": {
-                    "$ref": "#/components/schemas/CustomFieldItems"
-                  }
+                  "items": { "$ref": "#/components/schemas/CustomFieldItems" }
                 }
               }
             }
@@ -6255,9 +6130,7 @@
             "required": true,
             "schema": {
               "oneOf": [
-                {
-                  "$ref": "#/components/schemas/posStringOrNumber"
-                },
+                { "$ref": "#/components/schemas/posStringOrNumber" },
                 { "$ref": "#/components/schemas/TrelloID" }
               ]
             }
@@ -6590,9 +6463,7 @@
                     "type": "string",
                     "description": "The name of the Custom Field"
                   },
-                  "pos": {
-                    "$ref": "#/components/schemas/posStringOrNumber"
-                  },
+                  "pos": { "$ref": "#/components/schemas/posStringOrNumber" },
                   "display/cardFront": {
                     "type": "boolean",
                     "description": "Whether to display this custom field on the front of cards"
@@ -6864,9 +6735,7 @@
               "application/json": {
                 "schema": {
                   "type": "array",
-                  "items": {
-                    "$ref": "#/components/schemas/EnterpriseAuditLog"
-                  }
+                  "items": { "$ref": "#/components/schemas/EnterpriseAuditLog" }
                 }
               }
             }
@@ -6902,9 +6771,7 @@
             "description": "Success",
             "content": {
               "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/EnterpriseAdmin"
-                }
+                "schema": { "$ref": "#/components/schemas/EnterpriseAdmin" }
               }
             }
           },
@@ -7071,9 +6938,7 @@
               "application/json": {
                 "schema": {
                   "type": "array",
-                  "items": {
-                    "$ref": "#/components/schemas/Membership"
-                  }
+                  "items": { "$ref": "#/components/schemas/Membership" }
                 }
               }
             }
@@ -7594,11 +7459,7 @@
                 "schema": {
                   "type": "array",
                   "items": {
-                    "anyOf": [
-                      {
-                        "$ref": "#/components/schemas/Organization"
-                      }
-                    ]
+                    "anyOf": [{ "$ref": "#/components/schemas/Organization" }]
                   }
                 }
               }
@@ -8003,10 +7864,7 @@
             "explode": false,
             "description": "`all` or a comma separated list of List field names.",
             "required": false,
-            "schema": {
-              "type": "string",
-              "default": "name,closed,idBoard,pos"
-            }
+            "schema": { "type": "string", "default": "name,closed,idBoard,pos" }
           }
         ],
         "deprecated": false,
@@ -8736,11 +8594,7 @@
                 "schema": {
                   "type": "array",
                   "items": {
-                    "oneOf": [
-                      {
-                        "$ref": "#/components/schemas/Member"
-                      }
-                    ]
+                    "oneOf": [{ "$ref": "#/components/schemas/Member" }]
                   }
                 }
               }
@@ -8785,9 +8639,7 @@
                   "type": "array",
                   "items": {
                     "oneOf": [
-                      {
-                        "$ref": "#/components/schemas/BoardBackground"
-                      }
+                      { "$ref": "#/components/schemas/BoardBackground" }
                     ]
                   }
                 }
@@ -8827,9 +8679,7 @@
                   "type": "array",
                   "items": {
                     "oneOf": [
-                      {
-                        "$ref": "#/components/schemas/BoardBackground"
-                      }
+                      { "$ref": "#/components/schemas/BoardBackground" }
                     ]
                   }
                 }
@@ -8880,9 +8730,7 @@
             "description": "Success",
             "content": {
               "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/BoardBackground"
-                }
+                "schema": { "$ref": "#/components/schemas/BoardBackground" }
               }
             }
           }
@@ -8899,10 +8747,7 @@
             "in": "query",
             "description": "One of: `dark`, `light`, `unknown`",
             "required": false,
-            "schema": {
-              "enum": ["dark", "light", "unknown"],
-              "type": "string"
-            }
+            "schema": { "enum": ["dark", "light", "unknown"], "type": "string" }
           },
           {
             "name": "tile",
@@ -8918,9 +8763,7 @@
             "description": "Success",
             "content": {
               "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/BoardBackground"
-                }
+                "schema": { "$ref": "#/components/schemas/BoardBackground" }
               }
             }
           }
@@ -8994,9 +8837,7 @@
               "application/json": {
                 "schema": {
                   "type": "array",
-                  "items": {
-                    "$ref": "#/components/schemas/BoardStars"
-                  }
+                  "items": { "$ref": "#/components/schemas/BoardStars" }
                 }
               }
             }
@@ -9260,9 +9101,7 @@
               "application/json": {
                 "schema": {
                   "type": "array",
-                  "items": {
-                    "$ref": "#/components/schemas/BoardBackground"
-                  }
+                  "items": { "$ref": "#/components/schemas/BoardBackground" }
                 }
               }
             }
@@ -9289,9 +9128,7 @@
             "description": "Success",
             "content": {
               "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/BoardBackground"
-                }
+                "schema": { "$ref": "#/components/schemas/BoardBackground" }
               }
             }
           }
@@ -9331,9 +9168,7 @@
             "description": "Success",
             "content": {
               "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/BoardBackground"
-                }
+                "schema": { "$ref": "#/components/schemas/BoardBackground" }
               }
             }
           }
@@ -9350,10 +9185,7 @@
             "in": "query",
             "description": "One of: `dark`, `light`, `unknown`",
             "required": false,
-            "schema": {
-              "enum": ["dark", "light", "unknown"],
-              "type": "string"
-            }
+            "schema": { "enum": ["dark", "light", "unknown"], "type": "string" }
           },
           {
             "name": "tile",
@@ -9369,9 +9201,7 @@
             "description": "Success",
             "content": {
               "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/BoardBackground"
-                }
+                "schema": { "$ref": "#/components/schemas/BoardBackground" }
               }
             }
           }
@@ -9409,9 +9239,7 @@
               "application/json": {
                 "schema": {
                   "type": "array",
-                  "items": {
-                    "$ref": "#/components/schemas/CustomEmoji"
-                  }
+                  "items": { "$ref": "#/components/schemas/CustomEmoji" }
                 }
               }
             }
@@ -9523,9 +9351,7 @@
               "application/json": {
                 "schema": {
                   "type": "array",
-                  "items": {
-                    "$ref": "#/components/schemas/CustomSticker"
-                  }
+                  "items": { "$ref": "#/components/schemas/CustomSticker" }
                 }
               }
             }
@@ -9552,9 +9378,7 @@
             "description": "Success",
             "content": {
               "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/CustomSticker"
-                }
+                "schema": { "$ref": "#/components/schemas/CustomSticker" }
               }
             }
           }
@@ -9604,9 +9428,7 @@
             "description": "Success",
             "content": {
               "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/CustomSticker"
-                }
+                "schema": { "$ref": "#/components/schemas/CustomSticker" }
               }
             }
           }
@@ -9724,9 +9546,7 @@
               "application/json": {
                 "schema": {
                   "type": "array",
-                  "items": {
-                    "$ref": "#/components/schemas/Notification"
-                  }
+                  "items": { "$ref": "#/components/schemas/Notification" }
                 }
               }
             }
@@ -9787,9 +9607,7 @@
               "application/json": {
                 "schema": {
                   "type": "array",
-                  "items": {
-                    "$ref": "#/components/schemas/Organization"
-                  }
+                  "items": { "$ref": "#/components/schemas/Organization" }
                 }
               }
             }
@@ -9830,9 +9648,7 @@
               "application/json": {
                 "schema": {
                   "type": "array",
-                  "items": {
-                    "$ref": "#/components/schemas/Organization"
-                  }
+                  "items": { "$ref": "#/components/schemas/Organization" }
                 }
               }
             }
@@ -9863,9 +9679,7 @@
               "application/json": {
                 "schema": {
                   "type": "array",
-                  "items": {
-                    "$ref": "#/components/schemas/SavedSearch"
-                  }
+                  "items": { "$ref": "#/components/schemas/SavedSearch" }
                 }
               }
             }
@@ -10140,14 +9954,10 @@
                   "blockedKeys": {
                     "description": "Blocked key or array of blocked keys.",
                     "oneOf": [
-                      {
-                        "$ref": "#/components/schemas/BlockedKey"
-                      },
+                      { "$ref": "#/components/schemas/BlockedKey" },
                       {
                         "type": "array",
-                        "items": {
-                          "$ref": "#/components/schemas/BlockedKey"
-                        }
+                        "items": { "$ref": "#/components/schemas/BlockedKey" }
                       }
                     ]
                   }
@@ -10216,7 +10026,7 @@
         "tags": [],
         "summary": "Update blocked notification keys of Member on a channel",
         "description": "Update blocked notification keys of Member on a specific channel",
-        "operationId": "put-members-id-notificationChannelSettings-channel-blockedKeys-onchannel",
+        "operationId": "put-members-id-notificationChannelSettings-channel-blockedKeys-2",
         "requestBody": {
           "required": true,
           "content": {
@@ -10228,14 +10038,10 @@
                   "blockedKeys": {
                     "description": "Singular key or array of notification keys",
                     "oneOf": [
-                      {
-                        "$ref": "#/components/schemas/BlockedKey"
-                      },
+                      { "$ref": "#/components/schemas/BlockedKey" },
                       {
                         "type": "array",
-                        "items": {
-                          "$ref": "#/components/schemas/BlockedKey"
-                        }
+                        "items": { "$ref": "#/components/schemas/BlockedKey" }
                       }
                     ]
                   }
@@ -10292,7 +10098,7 @@
         "tags": [],
         "summary": "Update blocked notification keys of Member on a channel",
         "description": "Update blocked notification keys of Member on a specific channel",
-        "operationId": "put-members-id-notificationChannelSettings-channel-blockedKeys-onchannel-onkey",
+        "operationId": "put-members-id-notificationChannelSettings-channel-blockedKeys-3",
         "deprecated": false,
         "responses": {
           "200": {
@@ -10454,11 +10260,7 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "oneOf": [
-                    {
-                      "$ref": "#/components/schemas/Notification"
-                    }
-                  ]
+                  "oneOf": [{ "$ref": "#/components/schemas/Notification" }]
                 }
               }
             }
@@ -10493,11 +10295,7 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "oneOf": [
-                    {
-                      "$ref": "#/components/schemas/Notification"
-                    }
-                  ]
+                  "oneOf": [{ "$ref": "#/components/schemas/Notification" }]
                 }
               }
             }
@@ -10534,11 +10332,7 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "oneOf": [
-                    {
-                      "$ref": "#/components/schemas/Notification"
-                    }
-                  ]
+                  "oneOf": [{ "$ref": "#/components/schemas/Notification" }]
                 }
               }
             }
@@ -10579,11 +10373,7 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "oneOf": [
-                    {
-                      "$ref": "#/components/schemas/Notification"
-                    }
-                  ]
+                  "oneOf": [{ "$ref": "#/components/schemas/Notification" }]
                 }
               }
             }
@@ -10619,11 +10409,7 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "oneOf": [
-                    {
-                      "$ref": "#/components/schemas/Notification"
-                    }
-                  ]
+                  "oneOf": [{ "$ref": "#/components/schemas/Notification" }]
                 }
               }
             }
@@ -10706,9 +10492,7 @@
             "description": "Success",
             "content": {
               "application/json": {
-                "schema": {
-                  "oneOf": [{ "$ref": "#/components/schemas/Card" }]
-                }
+                "schema": { "oneOf": [{ "$ref": "#/components/schemas/Card" }] }
               }
             }
           }
@@ -10747,11 +10531,7 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "oneOf": [
-                    {
-                      "$ref": "#/components/schemas/TrelloList"
-                    }
-                  ]
+                  "oneOf": [{ "$ref": "#/components/schemas/TrelloList" }]
                 }
               }
             }
@@ -10875,11 +10655,7 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "oneOf": [
-                    {
-                      "$ref": "#/components/schemas/Organization"
-                    }
-                  ]
+                  "oneOf": [{ "$ref": "#/components/schemas/Organization" }]
                 }
               }
             }
@@ -10930,11 +10706,7 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "oneOf": [
-                    {
-                      "$ref": "#/components/schemas/Organization"
-                    }
-                  ]
+                  "oneOf": [{ "$ref": "#/components/schemas/Organization" }]
                 }
               }
             }
@@ -11200,11 +10972,7 @@
                 "schema": {
                   "type": "array",
                   "items": {
-                    "oneOf": [
-                      {
-                        "$ref": "#/components/schemas/Board"
-                      }
-                    ]
+                    "oneOf": [{ "$ref": "#/components/schemas/Board" }]
                   }
                 }
               }
@@ -11294,11 +11062,7 @@
                 "schema": {
                   "type": "array",
                   "items": {
-                    "oneOf": [
-                      {
-                        "$ref": "#/components/schemas/Member"
-                      }
-                    ]
+                    "oneOf": [{ "$ref": "#/components/schemas/Member" }]
                   }
                 }
               }
@@ -11393,11 +11157,7 @@
                 "schema": {
                   "type": "array",
                   "items": {
-                    "oneOf": [
-                      {
-                        "$ref": "#/components/schemas/Memberships"
-                      }
-                    ]
+                    "oneOf": [{ "$ref": "#/components/schemas/Memberships" }]
                   }
                 }
               }
@@ -11442,11 +11202,7 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "oneOf": [
-                    {
-                      "$ref": "#/components/schemas/Memberships"
-                    }
-                  ]
+                  "oneOf": [{ "$ref": "#/components/schemas/Memberships" }]
                 }
               }
             }
@@ -11478,11 +11234,7 @@
                 "schema": {
                   "type": "array",
                   "items": {
-                    "oneOf": [
-                      {
-                        "$ref": "#/components/schemas/PluginData"
-                      }
-                    ]
+                    "oneOf": [{ "$ref": "#/components/schemas/PluginData" }]
                   }
                 }
               }
@@ -11519,13 +11271,7 @@
               "application/json": {
                 "schema": {
                   "type": "array",
-                  "items": {
-                    "oneOf": [
-                      {
-                        "$ref": "#/components/schemas/Tag"
-                      }
-                    ]
-                  }
+                  "items": { "oneOf": [{ "$ref": "#/components/schemas/Tag" }] }
                 }
               }
             }
@@ -11543,9 +11289,7 @@
             "description": "Success",
             "content": {
               "application/json": {
-                "schema": {
-                  "oneOf": [{ "$ref": "#/components/schemas/Tag" }]
-                }
+                "schema": { "oneOf": [{ "$ref": "#/components/schemas/Tag" }] }
               }
             }
           }
@@ -11614,10 +11358,7 @@
             "schema": {
               "oneOf": [
                 { "$ref": "#/components/schemas/TrelloID" },
-                {
-                  "type": "string",
-                  "description": "Name of the organization"
-                }
+                { "type": "string", "description": "Name of the organization" }
               ]
             }
           },
@@ -11700,11 +11441,7 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "oneOf": [
-                    {
-                      "$ref": "#/components/schemas/Organization"
-                    }
-                  ]
+                  "oneOf": [{ "$ref": "#/components/schemas/Organization" }]
                 }
               }
             }
@@ -11947,9 +11684,7 @@
             "description": "Success",
             "content": {
               "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/PluginListing"
-                }
+                "schema": { "$ref": "#/components/schemas/PluginListing" }
               }
             }
           }
@@ -12030,9 +11765,7 @@
             "description": "Success",
             "content": {
               "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/PluginListing"
-                }
+                "schema": { "$ref": "#/components/schemas/PluginListing" }
               }
             }
           }
@@ -12224,18 +11957,10 @@
                   "type": "array",
                   "items": {
                     "oneOf": [
-                      {
-                        "$ref": "#/components/schemas/Member"
-                      },
-                      {
-                        "$ref": "#/components/schemas/Card"
-                      },
-                      {
-                        "$ref": "#/components/schemas/Board"
-                      },
-                      {
-                        "$ref": "#/components/schemas/Organization"
-                      }
+                      { "$ref": "#/components/schemas/Member" },
+                      { "$ref": "#/components/schemas/Card" },
+                      { "$ref": "#/components/schemas/Board" },
+                      { "$ref": "#/components/schemas/Organization" }
                     ]
                   }
                 }
