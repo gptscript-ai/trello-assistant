@@ -5420,13 +5420,6 @@
         "operationId": "get-cards-id-stickers",
         "parameters": [
           {
-            "name": "id",
-            "in": "path",
-            "description": "The ID of the Card",
-            "required": true,
-            "schema": { "$ref": "#/components/schemas/TrelloID" }
-          },
-          {
             "name": "fields",
             "in": "query",
             "description": "`all` or a comma-separated list of sticker [fields](/cloud/trello/guides/rest-api/object-definitions/)",
