@@ -1,9 +1,9 @@
 Name: trello-api
 Credential: trello-api-key as api.trello.comAPIKey
-Credential: github.com/gptscript-ai/credential as api.trello.comAPITOKEN with GPTSCRIPT_API_TRELLO_COM_APITOKEN as env and "Please go to https://trello.com/1/authorize?expiration=never&scope=read,write,account&response_type=token&key=aabf1a5f6af0a2e5c4c3807b4d3ccbc8 to authenticate and provide your trello API token" as message and key as field
+Credential: github.com/gptscript-ai/credential as api.trello.comAPIToken with GPTSCRIPT_API_TRELLO_COM_APITOKEN as env and "Please go to https://trello.com/1/authorize?expiration=never&scope=read,write,account&response_type=token&key=aabf1a5f6af0a2e5c4c3807b4d3ccbc8 to authenticate and provide your trello API token" as message and key as field
 Description: supabase api helper to help user calling their api
 Chat: true
-Tools: post-cards from ./openapi.json
+Tools: post-cards  from ./openapi.json
 Tools: delete-cards-id from ./openapi.json
 Tools: get-boards-id-cards from ./openapi.json
 Tools: get-organizations-id-boards from ./openapi.json
